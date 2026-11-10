@@ -6,7 +6,6 @@
 
 /* ===== THEME (edit colours here) ===== */
 :root{--about:#dfe2d7;--arch:#efeee6;--headbg:#e9e9dff0;--sub:#53594f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#111512;--ink:#e9e9df;--muted:#8d9488;--line:#e9e9df30;--about:#171c18;--arch:#0e120f;--headbg:#111512f0;--sub:#a7ad9f}}
 :root[data-theme="dark"]{--paper:#111512;--ink:#e9e9df;--muted:#8d9488;--line:#e9e9df30;--about:#171c18;--arch:#0e120f;--headbg:#111512f0;--sub:#a7ad9f}
 .ticker,.round-link,.orb-core,.portrait-mark,.tool-grid span:hover,.project-visual{color:#1c211d}
 .site-head{top:env(safe-area-inset-top,0px)}
