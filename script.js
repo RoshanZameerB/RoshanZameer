@@ -3,7 +3,7 @@ const menu=document.getElementById('menu');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.innerHTML=open?'CLOSE <b>×</b>':'MENU <b>＋</b>'});
 nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.innerHTML='MENU <b>＋</b>'}));
 const root=document.documentElement;
-document.getElementById('theme').onclick=()=>{const c=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');root.setAttribute('data-theme',c==='dark'?'light':'dark')};
+document.getElementById('theme').onclick=()=>{const c=root.getAttribute('data-theme')||'light';root.setAttribute('data-theme',c==='dark'?'light':'dark')};
 const orbit=document.querySelector('.orbit-art'),fine=matchMedia('(pointer:fine)').matches;
 if(fine){document.addEventListener('pointermove',e=>{const x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);orbit.style.transform=`perspective(900px) rotateY(${x*14}deg) rotateX(${-y*14}deg)`});
 }
